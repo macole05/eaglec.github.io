@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legacy Blocks Hub - Games</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Games</h1>
+      <p>Generate a CMD launch command for each game.</p>
+      <nav>
+        <a href="/index.html">Upload</a>
+        <a href="/games.html">Games + CMD Launch</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2>Game List</h2>
+        <div id="gamesList" class="games"></div>
+      </section>
+    </main>
+
+    <template id="gameItemTemplate">
+      <article class="game-item">
+        <h3 class="game-name"></h3>
+        <p class="game-meta"></p>
+        <p class="game-description"></p>
+        <div class="actions">
+          <button class="launch-btn">Generate CMD Launch</button>
+          <a class="download-link" target="_blank" rel="noopener noreferrer">Download</a>
+        </div>
+        <pre class="launch-output"></pre>
+      </article>
+    </template>
+
+    <script src="/games.js"></script>
+  </body>
+</html>

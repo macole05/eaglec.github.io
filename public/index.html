@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legacy Blocks Hub</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Legacy Blocks Hub</h1>
+      <p>Upload and launch legacy-style game files with a Node backend.</p>
+      <nav>
+        <a href="/index.html">Upload</a>
+        <a href="/games.html">Games + CMD Launch</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2>Upload Game</h2>
+        <form id="uploadForm">
+          <label>
+            Game name
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Description
+            <textarea name="description" rows="3" placeholder="Optional"></textarea>
+          </label>
+          <label>
+            Creator
+            <input type="text" name="creator" value="Builder" />
+          </label>
+          <label>
+            Game file (.rbxl/.rbxlx/.rbxm/.zip)
+            <input type="file" name="gameFile" accept=".rbxl,.rbxlx,.rbxm,.zip" required />
+          </label>
+          <button type="submit">Upload</button>
+        </form>
+        <p id="uploadStatus" class="status"></p>
+      </section>
+
+      <section class="panel">
+        <h2>2014 Client URL Replacements</h2>
+        <p>These are API-provided URL replacements to patch your client files.</p>
+        <pre id="replacementOutput" class="launch-output"></pre>
+      </section>
+    </main>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
